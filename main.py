@@ -20,3 +20,4 @@ async def login(request: Request, username: str = Form(...), password: str = For
     if username == VALID_USERNAME and password == VALID_PASSWORD:
         return templates.TemplateResponse("dashboard.html", {"request": request})
     return templates.TemplateResponse("login.html", {"request": request, "error": "Invalid credentials"})
+
